@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brewing Equipment - Bean Boutique</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Favicon Link  -->
+     <link rel="icon" type="image/x-icon" href="../imgs/iconCafe.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="../imgs/iconCafe.png" alt="Logo" class="logo-img">
+                    <a href="index.html" class="logo-text">Bean Boutique</a>
+
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="coffee.html" class="nav-link">Coffee</a></li>
+                        <li><a href="equipment.html" class="nav-link active">Brewing Equipment</a></li>
+                        <li><a href="events.html" class="nav-link">Events</a></li>
+                        <li><a href="special_offers.html" class="nav-link">Special Offers</a></li>
+                        <li class="mobile-only"><a href="cart.html" class="nav-link">Cart</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Search and Cart -->
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search coffee & equipment..." class="search-input">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Brewing Equipment</h1>
+                <p>Professional-grade brewing equipment to elevate your coffee experience at home</p>
+            </div>
+        </section>
+
+        <!-- Equipment Categories -->
+        <section class="categories">
+            <div class="container">
+                <div class="category-tabs">
+                    <button class="category-tab active" data-category="all">All Equipment</button>
+                    <button class="category-tab" data-category="espresso">Espresso Machines</button>
+                    <button class="category-tab" data-category="grinders">Grinders</button>
+                    <button class="category-tab" data-category="brewing">Brewing Tools</button>
+                    <button class="category-tab" data-category="accessories">Accessories</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipment Grid -->
+        <section class="products">
+            <div class="container">
+                <div class="equipment-grid" id="equipment-grid">
+                    <!-- Espresso Machine 1 -->
+                    <div class="equipment-card" data-category="espresso">
+                        <img src="../imgs/EspressoMachine.png" alt="Professional Espresso Machine">
+                        <div class="equipment-info">
+                            <h3 class="equipment-name">Professional Espresso Machine</h3>
+                            <p class="equipment-description">Commercial-grade espresso machine with dual boilers, perfect for cafe-quality espresso at home.</p>
+                            <div class="equipment-usage">
+                                <i class="fas fa-lightbulb"></i>
+                                <span class="usage-tip">Preheat the group head and portafilter; run a blank shot, then aim for a 1:2 ratio in 25–30 seconds.</span>
+                            </div>
+                            <div class="equipment-price">$1,299.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Coffee Grinder 1 -->
+                    <div class="equipment-card" data-category="grinders">
+                        <img src="../imgs/BurrGrinder.png" alt="Burr Coffee Grinder">
+                        <div class="equipment-info">
+                            <h3 class="equipment-name">Precision Burr Grinder</h3>
+                            <p class="equipment-description">Professional burr grinder with 40 grind settings for perfect consistency every time.</p>
+                            <div class="equipment-usage">
+                                <i class="fas fa-lightbulb"></i>
+                                <span class="usage-tip">Adjust grind size to your brew method; purge a small amount when changing settings for consistency.</span>
+                            </div>
+                            <div class="equipment-price">$299.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Pour Over Set -->
+                    <div class="equipment-card" data-category="brewing">
+                        <img src="../imgs/POCSet.webp" alt="Pour Over Coffee Set">
+                        <div class="equipment-info">
+                            <h3 class="equipment-name">Pour Over Coffee Set</h3>
+                            <p class="equipment-description">Complete pour-over brewing set with ceramic dripper, filters, and gooseneck kettle.</p>
+                            <div class="equipment-usage">
+                                <i class="fas fa-lightbulb"></i>
+                                <span class="usage-tip">Use a 1:16 coffee-to-water ratio, 92–96°C water; pre-wet filter and pour in slow pulses.</span>
+                            </div>
+                            <div class="equipment-price">$89.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- French Press -->
+                    <div class="equipment-card" data-category="brewing">
+                        <img src="../imgs/FrenchPress.png" alt="French Press">
+                        <div class="equipment-info">
+                            <h3 class="equipment-name">Premium French Press</h3>
+                            <p class="equipment-description">Double-wall borosilicate glass French press with stainless steel filter for rich, full-bodied coffee.</p>
+                            <div class="equipment-usage">
+                                <i class="fas fa-lightbulb"></i>
+                                <span class="usage-tip">Coarse grind, 1:15 ratio; steep 4 minutes, skim the crust, then plunge slowly.</span>
+                            </div>
+                            <div class="equipment-price">$49.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Coffee Scale -->
+                    <div class="equipment-card" data-category="accessories">
+                        <img src="../imgs/DigitalCoffeeScale.png" alt="Digital Coffee Scale">
+                        <div class="equipment-info">
+                            <h3 class="equipment-name">Digital Coffee Scale</h3>
+                            <p class="equipment-description">Precision digital scale with built-in timer for perfect coffee-to-water ratios.</p>
+                            <div class="equipment-usage">
+                                <i class="fas fa-lightbulb"></i>
+                                <span class="usage-tip">Tare the scale before dosing; use the timer to control bloom and pour intervals.</span>
+                            </div>
+                            <div class="equipment-price">$39.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Milk Frother -->
+                    <div class="equipment-card" data-category="accessories">
+                        <img src="../imgs/Milk_Frother.png" alt="Electric Milk Frother">
+                        <div class="equipment-info">
+                            <h3 class="equipment-name">Electric Milk Frother</h3>
+                            <p class="equipment-description">Professional milk frother for creating perfect microfoam for lattes and cappuccinos.</p>
+                            <div class="equipment-usage">
+                                <i class="fas fa-lightbulb"></i>
+                                <span class="usage-tip">Start with cold milk; stop when the pitcher is warm to the touch and swirl to integrate microfoam.</span>
+                            </div>
+                            <div class="equipment-price">$79.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Espresso Machine 2 -->
+                    <div class="equipment-card" data-category="espresso">
+                        <img src="../imgs/compact_espresso_machine.jpg" alt="Compact Espresso Machine">
+                        <div class="equipment-info">
+                            <h3 class="equipment-name">Compact Espresso Machine</h3>
+                            <p class="equipment-description">Space-saving espresso machine perfect for small kitchens without compromising on quality.</p>
+                            <div class="equipment-usage">
+                                <i class="fas fa-lightbulb"></i>
+                                <span class="usage-tip">Do a short flush and pre-warm the portafilter; target 25–30 seconds for a balanced shot.</span>
+                            </div>
+                            <div class="equipment-price">$399.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Coffee Storage -->
+                    <div class="equipment-card" data-category="accessories">
+                        <img src="../imgs/storage_canister.webp" alt="Coffee Storage Canister">
+                        <div class="equipment-info">
+                            <h3 class="equipment-name">Airtight Storage Canister</h3>
+                            <p class="equipment-description">Premium stainless steel canister with CO2 valve to keep your coffee beans fresh longer.</p>
+                            <div class="equipment-usage">
+                                <i class="fas fa-lightbulb"></i>
+                                <span class="usage-tip">Store in a cool, dark place; avoid daily-freezer cycles; use the valve to release CO2.</span>
+                            </div>
+                            <div class="equipment-price">$29.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Manual Grinder -->
+                    <div class="equipment-card" data-category="grinders">
+                        <img src="../imgs/Manual_Coffee_Grinder.png" alt="Manual Coffee Grinder">
+                        <div class="equipment-info">
+                            <h3 class="equipment-name">Manual Coffee Grinder</h3>
+                            <p class="equipment-description">Portable manual grinder with ceramic burrs, perfect for travel and camping.</p>
+                            <div class="equipment-usage">
+                                <i class="fas fa-lightbulb"></i>
+                                <span class="usage-tip">Note click positions for each method; keep a steady rhythm for a more uniform grind.</span>
+                            </div>
+                            <div class="equipment-price">$59.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Our Equipment -->
+        <section class="why-choose">
+            <div class="container">
+                <h2 class="section-title">Why Choose Our Equipment?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-award"></i>
+                        <h3>Professional Quality</h3>
+                        <p>All our equipment meets professional standards used in top coffee shops worldwide.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-tools"></i>
+                        <h3>Expert Support</h3>
+                        <p>Our coffee experts are here to help you choose the right equipment for your needs.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-shipping-fast"></i>
+                        <h3>Fast Shipping</h3>
+                        <p>Free shipping on orders over $100 with fast delivery to your doorstep.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Warranty Protection</h3>
+                        <p>All equipment comes with manufacturer warranty and our satisfaction guarantee.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Bean Boutique</h3>
+                    <p>We are passionate about delivering the finest coffee experience. From carefully selected beans to expert brewing, we're committed to quality.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="coffee.html">Coffee</a></li>
+                        <li><a href="equipment.html">Brewing Equipment</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="special_offers.html">Special Offers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 27 Old Haymarket, Liverpool L1 6ER, United Kingdom</p>
+                        <p><i class="fas fa-phone"></i> (44) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@beanboutique.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <p>&copy; 2024 Bean Boutique Coffee. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/equipment.js"></script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Offers - Aroma Coffee</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Favicon Link  -->
+     <link rel="icon" type="image/x-icon" href="../imgs/iconCafe.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="../imgs/iconCafe.png" alt="Bean Boutique Logo" class="logo-img">
+                     <a href="index.html" class="logo-text">Bean Boutique</a>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="coffee.html" class="nav-link">Coffee</a></li>
+                        <li><a href="equipment.html" class="nav-link">Brewing Equipment</a></li>
+                        <li><a href="events.html" class="nav-link">Events</a></li>
+                        <li><a href="special_offers.html" class="nav-link active">Special Offers</a></li>
+                        <li class="mobile-only"><a href="cart.html" class="nav-link">Cart</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Search and Cart -->
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search coffee & equipment..." class="search-input">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Special Offers & Deals</h1>
+                <p>Discover amazing deals on premium coffee and brewing equipment</p>
+            </div>
+        </section>
+
+        <!-- Featured Deal -->
+        <section class="featured-deal">
+            <div class="container">
+                <div class="deal-banner">
+                    <div class="deal-content">
+                        <div class="deal-badge">LIMITED TIME</div>
+                        <h2>50% OFF Premium Coffee Bundle</h2>
+                        <p>Get our top 3 premium coffee blends at an unbeatable price. Perfect for discovering your new favorite coffee!</p>
+                        <div class="deal-price">
+                            <span class="original-price">$89.97</span>
+                            <span class="sale-price">$44.99</span>
+                        </div>
+                        <div class="deal-timer" id="deal-timer">
+                            <div class="timer-item">
+                                <span class="timer-number" id="days">05</span>
+                                <span class="timer-label">Days</span>
+                            </div>
+                            <div class="timer-item">
+                                <span class="timer-number" id="hours">12</span>
+                                <span class="timer-label">Hours</span>
+                            </div>
+                            <div class="timer-item">
+                                <span class="timer-number" id="minutes">34</span>
+                                <span class="timer-label">Minutes</span>
+                            </div>
+                            <div class="timer-item">
+                                <span class="timer-number" id="seconds">56</span>
+                                <span class="timer-label">Seconds</span>
+                            </div>
+                        </div>
+                        <button class="claim-deal-btn">Claim This Deal</button>
+                    </div>
+                    <div class="deal-image">
+                        <img src="../imgs/dis_coffeeBean.webp" alt="Premium Coffee Bundle">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Offers -->
+        <section class="products">
+            <div class="container">
+                <h2 class="section-title">Current Offers</h2>
+                <div class="offers-grid">
+                    <!-- Offer 1 -->
+                    <div class="offer-card">
+                        <div class="offer-badge">SAVE 30%</div>
+                        <h3 class="offer-title">Coffee Subscription</h3>
+                        <p class="offer-description">Subscribe to our monthly coffee delivery and save 30% on your first 3 months. Fresh coffee delivered to your door!</p>
+                        <div class="offer-code">Code: SUBSCRIBE30</div>
+                        <div class="offer-validity">Valid until March 31, 2024</div>
+                        <button class="claim-offer-btn">Start Subscription</button>
+                    </div>
+
+                    <!-- Offer 2 -->
+                    <div class="offer-card">
+                        <div class="offer-badge">BUY 2 GET 1</div>
+                        <h3 class="offer-title">Coffee Bean Special</h3>
+                        <p class="offer-description">Buy any 2 bags of coffee beans and get the third one absolutely free. Mix and match any varieties!</p>
+                        <div class="offer-code">Code: BUY2GET1</div>
+                        <div class="offer-validity">Valid until April 15, 2024</div>
+                        <button class="claim-offer-btn">Shop Coffee</button>
+                    </div>
+
+                    <!-- Offer 3 -->
+                    <div class="offer-card">
+                        <div class="offer-badge">FREE SHIPPING</div>
+                        <h3 class="offer-title">Free Shipping Weekend</h3>
+                        <p class="offer-description">Enjoy free shipping on all orders this weekend. No minimum purchase required. Perfect time to stock up!</p>
+                        <div class="offer-code">Code: FREESHIP</div>
+                        <div class="offer-validity">Valid March 16-17, 2024</div>
+                        <button class="claim-offer-btn">Shop Now</button>
+                    </div>
+
+                    <!-- Offer 4 -->
+                    <div class="offer-card">
+                        <div class="offer-badge">25% OFF</div>
+                        <h3 class="offer-title">Brewing Equipment Sale</h3>
+                        <p class="offer-description">Upgrade your home brewing setup with 25% off all brewing equipment. From grinders to espresso machines!</p>
+                        <div class="offer-code">Code: BREW25</div>
+                        <div class="offer-validity">Valid until March 30, 2024</div>
+                        <button class="claim-offer-btn">Shop Equipment</button>
+                    </div>
+
+                    <!-- Offer 5 -->
+                    <div class="offer-card">
+                        <div class="offer-badge">STUDENT DISCOUNT</div>
+                        <h3 class="offer-title">Student Special</h3>
+                        <p class="offer-description">Students get 20% off all coffee purchases. Show your student ID in-store or verify online for discount.</p>
+                        <div class="offer-code">Code: STUDENT20</div>
+                        <div class="offer-validity">Ongoing offer</div>
+                        <button class="claim-offer-btn">Verify Status</button>
+                    </div>
+
+                    <!-- Offer 6 -->
+                    <div class="offer-card">
+                        <div class="offer-badge">LOYALTY REWARD</div>
+                        <h3 class="offer-title">Loyalty Points Double</h3>
+                        <p class="offer-description">Earn double loyalty points on all purchases this month. Points can be redeemed for free coffee and discounts!</p>
+                        <div class="offer-code">Code: DOUBLE</div>
+                        <div class="offer-validity">Valid all March 2024</div>
+                        <button class="claim-offer-btn">Join Loyalty</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter-signup">
+            <div class="container">
+                <div class="newsletter-content">
+                    <div class="newsletter-text">
+                        <h2>Never Miss a Deal!</h2>
+                        <p>Subscribe to our newsletter and be the first to know about exclusive offers, new products, and special events.</p>
+                        <div class="newsletter-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-tag"></i>
+                                <span>Exclusive discounts</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-bell"></i>
+                                <span>Early access to sales</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-gift"></i>
+                                <span>Birthday surprises</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="newsletter-form">
+                        <form id="newsletter-form">
+                            <div class="form-group">
+                                <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
+                                <button type="submit" class="subscribe-btn">Subscribe</button>
+                            </div>
+                            <div class="form-checkbox">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter-consent" required>
+                                    <span class="checkmark"></span>
+                                    I agree to receive promotional emails and offers
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Terms and Conditions -->
+        <section class="terms-section">
+            <div class="container">
+                <h2 class="section-title">Offer Terms & Conditions</h2>
+                <div class="terms-content">
+                    <div class="terms-grid">
+                        <div class="terms-item">
+                            <h3>General Terms</h3>
+                            <ul>
+                                <li>Offers cannot be combined with other promotions</li>
+                                <li>Valid for online and in-store purchases unless specified</li>
+                                <li>Aroma Coffee reserves the right to modify or cancel offers</li>
+                                <li>Offers valid while supplies last</li>
+                            </ul>
+                        </div>
+                        <div class="terms-item">
+                            <h3>Discount Codes</h3>
+                            <ul>
+                                <li>Enter code at checkout to apply discount</li>
+                                <li>Codes are case-sensitive</li>
+                                <li>One code per order unless specified</li>
+                                <li>Codes cannot be applied to previous purchases</li>
+                            </ul>
+                        </div>
+                        <div class="terms-item">
+                            <h3>Shipping & Returns</h3>
+                            <ul>
+                                <li>Free shipping offers apply to standard delivery</li>
+                                <li>Expedited shipping charges may apply</li>
+                                <li>Return policy applies to all discounted items</li>
+                                <li>Some restrictions may apply to international orders</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Bean Boutique</h3>
+                    <p>We are passionate about delivering the finest coffee experience. From carefully selected beans to expert brewing, we're committed to quality.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="coffee.html">Coffee</a></li>
+                        <li><a href="equipment.html">Brewing Equipment</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="special_offers.html">Special Offers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 27 Old Haymarket, Liverpool L1 6ER, United Kingdom</p>
+                        <p><i class="fas fa-phone"></i> (44) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@beanboutique.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <p>&copy; 2024 Bean Boutique. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/offers.js"></script>
+</body>
+</html>

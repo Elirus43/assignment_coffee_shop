@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bean Boutique Coffee & Equipments</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Favicon Link  -->
+     <link rel="icon" type="image/x-icon" href="../imgs/iconCafe.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="../imgs/iconCafe.png" alt="Aroma Coffee Logo" class="logo-img">
+                     <a href="index.html" class="logo-text">Bean Boutique</a>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="coffee.html" class="nav-link">Coffee</a></li>
+                        <li><a href="equipment.html" class="nav-link">Brewing Equipment</a></li>
+                        <li><a href="events.html" class="nav-link">Events</a></li>
+                        <li><a href="special_offers.html" class="nav-link">Special Offers</a></li>
+                        <!-- Mobile-only cart entry moved into burger menu -->
+                        <li class="mobile-only"><a href="cart.html" class="nav-link">Cart</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Search and Cart -->
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search coffee & equipment..." class="search-input">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section with Image Slider -->
+        <section class="hero">
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide active">
+                        <img src="../imgs/coffee_bean.jpg" alt="Premium Coffee Beans">
+                        <div class="slide-content">
+                            <h1>Premium Coffee Beans</h1>
+                            <p>Discover our carefully selected coffee beans from around the world</p>
+                            <a href="coffee.html" class="glass-btn">Shop now</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="../imgs/coffeeEvent.jpg" alt="Perfect Coffee Cup">
+                        <div class="slide-content">
+                            <h1>Coffee Moments</h1>
+                            <p>Join us for unforgettable coffee experiences!</p>
+                            <a href="events.html" class="glass-btn">Explore more</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="../imgs/modern_brewing.jpg" alt="Premium Brewing Equipments">
+                        <div class="slide-content">
+                            <h1>Premium Brewing Equipments</h1>
+                            <p>Upgrade your coffee game with our selection of professional-quality brewing tools</p>
+                            <a href="equipment.html" class="glass-btn">Explore more</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="../imgs/shop.jpg" alt="Coffee Shop Interior">
+                        <div class="slide-content">
+                            <h1>Visit Our Coffee Shop</h1>
+                            <p>Experience the perfect ambiance for coffee lovers</p>
+                            <a href="#location" class="glass-btn">Find Location</a>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- Slider Navigation -->
+                <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                
+                <!-- Slider Dots -->
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Coffee Section -->
+        <section class="featured-coffee">
+            <div class="container">
+                <h2 class="section-title">Our Featured Coffees</h2>
+                <div class="coffee-grid">
+                    <div class="coffee-card">
+                        <img src="../imgs/espresso.jpg" alt="Arabica Blend">
+                        <div class="card-content">
+                            <h3>Midnight Espresso</h3>
+                            <p>A deep, velvety shot of pure coffee intensity, delivers bold, dark-roast richness with subtle hints of cocoa and toasted caramel</p>
+                            <div class="price">$24.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="coffee-card">
+                        <img src="../imgs/latteArt.jpg" alt="Dark Roast">
+                        <div class="card-content">
+                            <h3>Cloud Latte</h3>
+                            <p>A silky-smooth latte crowned with a cloud-like layer of frothy milk, delivering gentle waves of creamy sweetness</p>
+                            <div class="price">$26.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="coffee-card">
+                        <img src="../imgs/black_coffee.jpg" alt="Arabica Aura">
+                        <div class="card-content">
+                            <h3>Arabica Aura</h3>
+                            <p>Each sip delivers the raw depth of freshly brewed beans, rich with earthy undertones and a clean, invigorating finish</p>
+                            <div class="price">$28.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="see-more">
+                    <a href="/html/coffee.html" class="see-more-btn">See More Coffees</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Coffee Story Section -->
+           <section class="coffee-story">
+            <div class="container">
+                <div class="story-content">
+                    <div class="story-text">
+                        <div class="story-header">
+                            <span class="story-label">Our Journey</span>
+                            <h2 class="story-title">The Art of Perfect Coffee</h2>
+                        </div>
+                        <div class="story-description">
+                            <p>For over two decades, we've been on a passionate journey to discover and share the world's finest coffee. From the misty highlands of Ethiopia to the volcanic slopes of Guatemala, we work directly with farmers who share our commitment to quality and sustainability.</p>
+                            <p>Every bean tells a story of dedication, craftsmanship, and the pursuit of perfection. Our master roasters carefully develop each profile to unlock the unique characteristics that make every cup an extraordinary experience.</p>
+                        </div>
+                        <div class="story-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">20+</div>
+                                <div class="stat-label">Years of Excellence</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">15</div>
+                                <div class="stat-label">Coffee Origins</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">50K+</div>
+                                <div class="stat-label">Happy Customers</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-visual">
+                        <div class="story-image-container">
+                            <iframe class="story-image" width="560" height="315" src="https://www.youtube.com/embed/62wEk02YKs0?si=XkbiC2el17YUKDJL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="story-features">
+                            <div class="feature-item">
+                                <i class="fas fa-leaf"></i>
+                                <span>Sustainably Sourced</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-fire"></i>
+                                <span>Expertly Roasted</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-heart"></i>
+                                <span>Crafted with Love</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Reviews Section -->
+        <section class="reviews">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Amazing coffee! The quality is outstanding and the flavor is incredible. I've been a customer for over a year now."</p>
+                        <div class="reviewer">
+                            <strong>Sarah Johnson</strong>
+                            <span>Coffee Enthusiast</span>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The best coffee shop in town! Great atmosphere, friendly staff, and the coffee is always perfect. Highly recommended!"</p>
+                        <div class="reviewer">
+                            <strong>Mike Chen</strong>
+                            <span>Regular Customer</span>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Exceptional quality and service. The brewing equipment I bought here has transformed my home coffee experience."</p>
+                        <div class="reviewer">
+                            <strong>Emily Rodriguez</strong>
+                            <span>Home Barista</span>
+                        </div>
+                    </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Location Map Section -->
+        <section class="map-section" id="location">
+            <div class="container">
+                <div class="map-content">
+                    <div class="map-info">
+                        <span class="map-label">Visit Us</span>
+                        <h2 class="map-title">Our Coffee Shop Location</h2>
+                        <p class="map-subtitle">Stop by for a perfectly brewed cup and a cozy atmosphere.</p>
+                        <div class="map-details">
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>27 Old Haymarket, Liverpool L1 6ER, United Kingdom</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Mon - Sun: 8:00 AM - 9:00 PM</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(44) 123-4567</span>
+                            </div>
+                        </div>
+                        <div class="map-cta">
+                            <a class="directions-btn" href="https://www.google.com/maps/dir/Liverpool+Football+Club,+Anfield,+Liverpool+L4+0TH,+United+Kingdom/Lovelocks+Coffee+Shop,+27+Old+Haymarket,+Liverpool+L1+6ER,+United+Kingdom/@53.4193341,-2.9930217,14z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x487b217acf6b3a1d:0x76f6a38bda0d33c3!2m2!1d-2.9608201!2d53.4308457!1m5!1m1!1s0x487b213abd6364ef:0xab2fff5e5f863f75!2m2!1d-2.9847721!2d53.4090553?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Get Directions</a>
+                        </div>
+                    </div>
+                    <div class="map-embed">
+                        <iframe 
+                            title="Bean Boutique Location Map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7404.948646508577!2d-2.999319170249971!3d53.40340994130741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b213abd6364ef%3A0xab2fff5e5f863f75!2sLovelocks%20Coffee%20Shop!5e0!3m2!1sen!2sus!4v1754766467452!5m2!1sen!2sus"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            aria-label="Map showing the location of Bean Boutique">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Bean Boutique</h3>
+                    <p>We are passionate about delivering the finest coffee experience. From carefully selected beans to expert brewing, we're committed to quality.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="coffee.html">Coffee</a></li>
+                        <li><a href="equipment.html">Brewing Equipment</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="special_offers.html">Special Offers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 27 Old Haymarket, Liverpool L1 6ER, United Kingdom</p>
+                        <p><i class="fas fa-phone"></i> (44) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@beanboutique.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <p>&copy; 2024 Bean Boutique Coffee. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Email Subscription Popup -->
+    <div id="emailPopup" class="email-popup-overlay">
+        <div class="email-popup">
+            <button class="popup-close" id="closePopup">&times;</button>
+            <div class="popup-content">
+                <div class="popup-header">
+                    <div class="popup-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h2 class="popup-title">Welcome to Bean Boutique!</h2>
+                    <p class="popup-subtitle">Get 15% off your first order</p>
+                </div>
+                <div class="popup-body">
+                    <p class="popup-description">Join our coffee community and receive exclusive offers, brewing tips, and early access to new arrivals.</p>
+                    <form id="emailSubscriptionForm" class="popup-form">
+                        <div class="form-group">
+                            <input type="email" id="emailInput" placeholder="Enter your email address" required>
+                            <button type="submit" class="popup-submit-btn">
+                                <span class="btn-text">Get My Discount</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <div class="form-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-check"></i>
+                                <span>15% off first order</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check"></i>
+                                <span>Exclusive coffee tips</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check"></i>
+                                <span>Early access to new blends</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="popup-footer">
+                    <p class="privacy-text">We respect your privacy. Unsubscribe at any time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/popup.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+</html>

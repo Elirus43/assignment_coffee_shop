@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Coffee - Bean Boutique</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Favicon Link  -->
+     <link rel="icon" type="image/x-icon" href="../imgs/iconCafe.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="../imgs/iconCafe.png" alt="Our Logo" class="logo-img">
+                    <a href="index.html" class="logo-text">Bean Boutique</a>
+
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="coffee.html" class="nav-link active">Coffee</a></li>
+                        <li><a href="equipment.html" class="nav-link">Brewing Equipment</a></li>
+                        <li><a href="events.html" class="nav-link">Events</a></li>
+                        <li><a href="special_offers.html" class="nav-link">Special Offers</a></li>
+                        <li class="mobile-only"><a href="cart.html" class="nav-link">Cart</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Search and Cart -->
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search coffee & equipment..." class="search-input">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Coffee Collection</h1>
+                <p>Find the perfect brew for any mood — bold, creamy, or refreshingly chilled</p>
+            </div>
+        </section>
+
+        <!-- Filters -->
+        <section class="filters">
+            <div class="container">
+                <div class="filter-bar">
+                    <div class="filter-group">
+                        <label for="roast-filter">Roast Level:</label>
+                        <select id="roast-filter" class="filter-select">
+                            <option value="">All Roasts</option>
+                            <option value="light">Light Roast</option>
+                            <option value="medium">Medium Roast</option>
+                            <option value="dark">Dark Roast</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="origin-filter">Origin:</label>
+                        <select id="origin-filter" class="filter-select">
+                            <option value="">All Origins</option>
+                            <option value="colombia">Colombia</option>
+                            <option value="ethiopia">Ethiopia</option>
+                            <option value="brazil">Brazil</option>
+                            <option value="guatemala">Guatemala</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="price-filter">Price Range:</label>
+                        <select id="price-filter" class="filter-select">
+                            <option value="">All Prices</option>
+                            <option value="0-25">$0 - $25</option>
+                            <option value="25-35">$25 - $35</option>
+                            <option value="35-50">$35 - $50</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sort-filter">Sort By:</label>
+                        <select id="sort-filter" class="filter-select">
+                            <option value="name">Name</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Rating</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coffee Products Grid -->
+        <section class="products">
+            <div class="container">
+                <div class="products-grid" id="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card" data-roast="medium" data-origin="colombia" data-price="24.99">
+                        <div class="product-image">
+                            <img src="../imgs/espresso.jpg" alt="espresso">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-count">(124)</span>
+                            </div>
+                            <h3 class="product-name">Midnight Espresso</h3>
+                            <p class="product-description">A deep, velvety shot of pure coffee intensity, delivers bold, dark-roast richness with subtle hints of cocoa and toasted caramel</p>
+                            <div class="product-details">
+                                <span class="roast-level">Medium Roast</span>
+                                <span class="origin">Colombia</span>
+                            </div>
+                            <div class="extra-details">
+                                <div class="tasting-notes">
+                                    <i class="fas fa-seedling"></i>
+                                    <span class="note">Dark Chocolate</span>
+                                    <span class="note">Caramel</span>
+                                </div>
+                                <div class="brew-method">
+                                    <i class="fas fa-mug-saucer"></i>
+                                    <span class="method">Espresso Machine</span>
+                                    <span class="method">Moka Pot</span>
+                                </div>
+                            </div>
+                            <div class="product-price">$24.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card" data-roast="dark" data-origin="brazil" data-price="26.99">
+                        <div class="product-image">
+                            <img src="../imgs/latteArt.jpg" alt="latte">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-count">(89)</span>
+                            </div>
+                            <h3 class="product-name">Cloud Latte</h3>
+                            <p class="product-description">A silky-smooth latte crowned with a cloud-like layer of frothy milk, delivering gentle waves of creamy sweetness</p>
+                            <div class="product-details">
+                                <span class="roast-level">Dark Roast</span>
+                                <span class="origin">Brazil</span>
+                            </div>
+                            <div class="extra-details">
+                                <div class="tasting-notes">
+                                    <i class="fas fa-seedling"></i>
+                                    <span class="note">Milk Chocolate</span>
+                                    <span class="note">Vanilla</span>
+                                    <span class="note">Caramel</span>
+                                </div>
+                                <div class="brew-method">
+                                    <i class="fas fa-mug-saucer"></i>
+                                    <span class="method">Espresso Machine</span>
+                                    <span class="method">AeroPress</span>
+                                </div>
+                            </div>
+                            <div class="product-price">$26.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card" data-roast="medium" data-origin="ethiopia" data-price="28.99">
+                        <div class="product-image">
+                            <img src="../imgs/black_coffee.jpg" alt="Arabica Aura">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-count">(156)</span>
+                            </div>
+                            <h3 class="product-name">Arabica Aura</h3>
+                            <p class="product-description">Each sip delivers the raw depth of freshly brewed beans, rich with earthy undertones and a clean, invigorating finish</p>
+                            <div class="product-details">
+                                <span class="roast-level">Medium Roast</span>
+                                <span class="origin">Ethiopia</span>
+                            </div>
+                            <div class="extra-details">
+                                <div class="tasting-notes">
+                                    <i class="fas fa-seedling"></i>
+                                    <span class="note">Cocoa Nib</span>
+                                    <span class="note">Citrus Zest</span>
+                                    <span class="note">Earthy</span>
+                                </div>
+                                <div class="brew-method">
+                                    <i class="fas fa-mug-saucer"></i>
+                                    <span class="method">Pour-over (V60)</span>
+                                    <span class="method">Drip Machine</span>
+                                </div>
+                            </div>
+                            <div class="product-price">$28.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card" data-roast="light" data-origin="guatemala" data-price="32.99">
+                        <div class="product-image">
+                            <img src="../imgs/coffee1.jpg" alt="Sunrise light">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(73)</span>
+                            </div>
+                            <h3 class="product-name">Sunrise Light</h3>
+                            <p class="product-description">A gentle, bright coffee bursting with delicate floral and citrus notes</p>
+                            <div class="product-details">
+                                <span class="roast-level">Light Roast</span>
+                                <span class="origin">Guatemala</span>
+                            </div>
+                            <div class="extra-details">
+                                <div class="tasting-notes">
+                                    <i class="fas fa-seedling"></i>
+                                    <span class="note">Floral</span>
+                                    <span class="note">Lemon Zest</span>
+                                    <span class="note">Honey</span>
+                                </div>
+                                <div class="brew-method">
+                                    <i class="fas fa-mug-saucer"></i>
+                                    <span class="method">Pour-over (V60)</span>
+                                    <span class="method">AeroPress</span>
+                                </div>
+                            </div>
+                            <div class="product-price">$32.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product-card" data-roast="medium" data-origin="colombia" data-price="29.99">
+                        <div class="product-image">
+                            <img src="../imgs/coffee2.jpg" alt="Sunset roast">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-count">(201)</span>
+                            </div>
+                            <h3 class="product-name">Sunset Roast</h3>
+                            <p class="product-description">Experience the warm embrace of our Sunset Roast, crafted from premium Colombian beans</p>
+                            <div class="product-details">
+                                <span class="roast-level">Medium Roast</span>
+                                <span class="origin">Colombia</span>
+                            </div>
+                            <div class="extra-details">
+                                <div class="tasting-notes">
+                                    <i class="fas fa-seedling"></i>
+                                    <span class="note">Caramel</span>
+                                    <span class="note">Red Berries</span>
+                                    <span class="note">Cocoa</span>
+                                </div>
+                                <div class="brew-method">
+                                    <i class="fas fa-mug-saucer"></i>
+                                    <span class="method">Drip Machine</span>
+                                    <span class="method">French Press</span>
+                                </div>
+                            </div>
+                            <div class="product-price">$29.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="product-card" data-roast="dark" data-origin="ethiopia" data-price="35.99">
+                        <div class="product-image">
+                            <img src="../imgs/coffee3.webp" alt="ethiopian bloom">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(67)</span>
+                            </div>
+                            <h3 class="product-name">Ethiopian Bloom</h3>
+                            <p class="product-description">Floral cup bursting with lively citrus and jasmine notes. A true blossom of flavor in every sip</p>
+                            <div class="product-details">
+                                <span class="roast-level">Dark Roast</span>
+                                <span class="origin">Ethiopia</span>
+                            </div>
+                            <div class="extra-details">
+                                <div class="tasting-notes">
+                                    <i class="fas fa-seedling"></i>
+                                    <span class="note">Jasmine</span>
+                                    <span class="note">Bergamot</span>
+                                    <span class="note">Citrus</span>
+                                </div>
+                                <div class="brew-method">
+                                    <i class="fas fa-mug-saucer"></i>
+                                    <span class="method">Pour-over (Chemex/V60)</span>
+                                </div>
+                            </div>
+                            <div class="product-price">$35.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 7 Beans  -->
+                     <div class="product-card" data-roast="dark" data-origin="arabica" data-price="45.99">
+                        <div class="product-image">
+                            <img src="../imgs/arabica_bean.jpg" alt="arabica beans">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-count">(87)</span>
+                            </div>
+                            <h3 class="product-name">Veloura Arabica</h3>
+                            <p class="product-description">A luxurious blend of hand-picked Arabica beans, celebrated for their velvety smooth body, delicate floral aroma, and a gentle sweetness that lingers with every sip</p>
+                            <div class="product-details">
+                                <span class="roast-level">Dark Roast</span>
+                                <span class="origin">Arabica</span>
+                            </div>
+                            <div class="extra-details">
+                                <div class="tasting-notes">
+                                    <i class="fas fa-seedling"></i>
+                                    <span class="note">Aroma</span>
+                                    <span class="note">Flavor</span>
+                                    <span class="note">Body</span>
+                                </div>
+                                <div class="brew-method">
+                                    <i class="fas fa-mug-saucer"></i>
+                                    <span class="method">Pour-over (Chemex/V60)</span>
+                                </div>
+                            </div>
+                            <div class="product-price">$45.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 8 Beans  -->
+                     <div class="product-card" data-roast="dark" data-origin="brazil" data-price="48.99">
+                        <div class="product-image">
+                            <img src="../imgs/Robusta.webp" alt="robusta">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-count">(122)</span>
+                            </div>
+                            <h3 class="product-name">Boldcrest Robusta</h3>
+                            <p class="product-description">A commanding roast crafted from premium Robusta beans, delivering a deep, full-bodied flavor with earthy undertones, intense aroma, and a powerful caffeine kick</p>
+                            <div class="product-details">
+                                <span class="roast-level">Dark Roast</span>
+                                <span class="origin">Brazil</span>
+                            </div>
+                            <div class="extra-details">
+                                <div class="tasting-notes">
+                                    <i class="fas fa-seedling"></i>
+                                    <span class="note">Deep coca</span>
+                                    <span class="note">Energizing</span>
+                                    <span class="note">Caramel</span>
+                                </div>
+                                <div class="brew-method">
+                                    <i class="fas fa-mug-saucer"></i>
+                                    <span class="method">Espresso Machine</span>
+                                    <span class="method">AeroPress</span>
+                                </div>
+                            </div>
+                            <div class="product-price">$48.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 9 Beans  -->
+                     <div class="product-card" data-roast="dark" data-origin="brazil" data-price="39.99">
+                        <div class="product-image">
+                            <img src="../imgs/Colombia_beans.webp" alt="colombian">
+                            <div class="product-overlay">
+                                <button class="quick-view-btn">Quick View</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="rating-count">(110)</span>
+                            </div>
+                            <h3 class="product-name">Andes Gold Colombian</h3>
+                            <p class="product-description">Hand-selected Arabica beans from the lush Andes mountains, offering a perfectly balanced cup with a smooth body, bright citrus notes, and a subtle nutty sweetness</p>
+                            <div class="product-details">
+                                <span class="roast-level">Dark Roast</span>
+                                <span class="origin">Colombia</span>
+                            </div>
+                            <div class="extra-details">
+                                <div class="tasting-notes">
+                                    <i class="fas fa-seedling"></i>
+                                    <span class="note">Balanced</span>
+                                    <span class="note">Sweet floral</span>
+                                    <span class="note">Smooth</span>
+                                </div>
+                                <div class="brew-method">
+                                    <i class="fas fa-mug-saucer"></i>
+                                    <span class="method">Drip Machine</span>
+                                    <span class="method">French Press</span>
+                                </div>
+                            </div>
+                            <div class="product-price">$39.99</div>
+                            <button class="add-to-cart-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Bean Boutique</h3>
+                    <p>We are passionate about delivering the finest coffee experience. From carefully selected beans to expert brewing, we're committed to quality.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="coffee.html">Coffee</a></li>
+                        <li><a href="equipment.html">Brewing Equipment</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="special_offers.html">Special Offers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 27 Old Haymarket, Liverpool L1 6ER, United Kingdom</p>
+                        <p><i class="fas fa-phone"></i> (44) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@beanboutique.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <p>&copy; 2024 Bean Boutique Coffee. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/coffee.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Aroma Coffee</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Favicon Link  -->
+     <link rel="icon" type="image/x-icon" href="../imgs/iconCafe.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="../imgs/iconCafe.png" alt="Logo" class="logo-img">
+                    <a href="index.html" class="logo-text">Bean Boutique</a>
+
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="coffee.html" class="nav-link">Coffee</a></li>
+                        <li><a href="equipment.html" class="nav-link">Brewing Equipment</a></li>
+                        <li><a href="events.html" class="nav-link">Events</a></li>
+                        <li><a href="special_offers.html" class="nav-link">Special Offers</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Search and Cart -->
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search coffee & equipment..." class="search-input">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <a href="cart.html" class="cart-icon active">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Shopping Cart</h1>
+                <p>Review your items and proceed to checkout</p>
+            </div>
+        </section>
+
+        <!-- Cart Content -->
+        <section class="cart-container">
+            <div class="container">
+                <div class="cart-layout">
+                    <!-- Cart Items -->
+                    <div class="cart-main">
+                        <div class="cart-items" id="cart-items">
+                            <!-- Cart items will be dynamically loaded here -->
+                        </div>
+                        
+                        <!-- Continue Shopping -->
+                        <div class="continue-shopping">
+                            <a href="coffee.html" class="continue-btn">
+                                <i class="fas fa-arrow-left"></i>
+                                Continue Shopping
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Cart Summary -->
+                    <div class="cart-sidebar">
+                        <div class="cart-summary">
+                            <h3>Order Summary</h3>
+                            <div class="summary-details">
+                                <div class="summary-row">
+                                    <span>Subtotal:</span>
+                                    <span id="cart-subtotal">$0.00</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Shipping:</span>
+                                    <span id="cart-shipping">$5.99</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Tax:</span>
+                                    <span id="cart-tax">$0.00</span>
+                                </div>
+                                <div class="summary-row discount-row" id="discount-row" style="display: none;">
+                                    <span>Discount:</span>
+                                    <span id="cart-discount">-$0.00</span>
+                                </div>
+                                <div class="summary-row summary-total">
+                                    <span>Total:</span>
+                                    <span id="cart-total">$5.99</span>
+                                </div>
+                            </div>
+
+                            <!-- Discount Code -->
+                            <div class="discount-section">
+                                <h4>Discount Code</h4>
+                                <div class="discount-form">
+                                    <input type="text" id="discount-code" placeholder="Enter discount code" class="discount-input">
+                                    <button id="apply-discount" class="apply-btn">Apply</button>
+                                </div>
+                                <div id="discount-message" class="discount-message"></div>
+                            </div>
+
+                            <div class="cart-actions">
+                                <button id="clear-cart-btn" class="clear-cart-btn">
+                                    <i class="fas fa-trash"></i> Clear all items
+                                </button>
+                            </div>
+                            <!-- Checkout Button -->
+                            <button class="checkout-btn" id="checkout-btn">
+                                Proceed Checkout
+                            </button>
+
+                            <!-- Payment Methods -->
+                            <div class="payment-methods">
+                                <p>We accept:</p>
+                                <div class="payment-icons">
+                                    <i class="fab fa-cc-visa"></i>
+                                    <i class="fab fa-cc-mastercard"></i>
+                                    <i class="fab fa-cc-amex"></i>
+                                    <i class="fab fa-cc-paypal"></i>
+                                    <i class="fab fa-apple-pay"></i>
+                                    <i class="fab fa-google-pay"></i>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Recommended Products -->
+                        <div class="recommended-products">
+                            <h3>You might also like</h3>
+                            <div class="recommended-grid" id="recommended-grid">
+                                <!-- Recommended products will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Bean Boutique</h3>
+                    <p>We are passionate about delivering the finest coffee experience. From carefully selected beans to expert brewing, we're committed to quality.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="coffee.html">Coffee</a></li>
+                        <li><a href="equipment.html">Brewing Equipment</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="special_offers.html">Special Offers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 27 Old Haymarket, Liverpool L1 6ER, United Kingdom</p>
+                        <p><i class="fas fa-phone"></i> (44) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@beanboutique.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <p>&copy; 2024 Bean Boutique Coffee. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/cart.js"></script>
+</body>
+</html>
