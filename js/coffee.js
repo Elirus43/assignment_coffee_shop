@@ -218,9 +218,7 @@ function initQuickView() {
                                 <div class="detail-item">
                                     <strong>Grind Options:</strong> Whole Bean, Fine, Medium, Coarse
                                 </div>
-                                <div class="detail-item">
-                                    <strong>Size:</strong> 12oz bag
-                                </div>
+                                
                             </div>
                             <div class="modal-actions">
                                 <div class="quantity-selector">
@@ -241,19 +239,7 @@ function initQuickView() {
             </div>
         `;
 
-        // Add modal styles
-        modal.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 2000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        `;
-
+        
         document.body.appendChild(modal);
         document.body.style.overflow = 'hidden';
 
@@ -307,131 +293,3 @@ function initQuickView() {
         }
     }
 }
-
-// Add modal styles to the page
-const modalStyles = document.createElement('style');
-modalStyles.textContent = `
-    .modal-overlay {
-        background: rgba(0, 0, 0, 0.8);
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem;
-    }
-
-    .modal-content {
-        background: white;
-        border-radius: 15px;
-        max-width: 800px;
-        width: 100%;
-        max-height: 90vh;
-        overflow-y: auto;
-        position: relative;
-    }
-
-    .modal-close {
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        background: none;
-        border: none;
-        font-size: 2rem;
-        cursor: pointer;
-        color: #666;
-        z-index: 1;
-    }
-
-    .modal-close:hover {
-        color: #333;
-    }
-
-    .modal-body {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        padding: 2rem;
-    }
-
-    .modal-image img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-
-    .modal-info h2 {
-        color: #2c1810;
-        margin-bottom: 1rem;
-        font-size: 1.8rem;
-    }
-
-    .modal-price {
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: #d4a574;
-        margin-bottom: 1rem;
-    }
-
-    .modal-description {
-        color: #666;
-        margin-bottom: 1.5rem;
-        line-height: 1.6;
-    }
-
-    .modal-details {
-        margin-bottom: 2rem;
-    }
-
-    .detail-item {
-        margin-bottom: 0.5rem;
-        color: #555;
-    }
-
-    .detail-item strong {
-        color: #2c1810;
-    }
-
-    .modal-actions {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .quantity-selector {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .quantity-selector select {
-        padding: 8px 12px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        background: white;
-    }
-
-    .modal-add-to-cart {
-        flex: 1;
-        max-width: 200px;
-    }
-
-    @media (max-width: 768px) {
-        .modal-body {
-            grid-template-columns: 1fr;
-            gap: 1rem;
-            padding: 1rem;
-        }
-        
-        .modal-actions {
-            flex-direction: column;
-            align-items: stretch;
-        }
-        
-        .modal-add-to-cart {
-            max-width: none;
-        }
-    }
-`;
-document.head.appendChild(modalStyles);

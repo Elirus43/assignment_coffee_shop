@@ -221,7 +221,6 @@ html {
   color: rgba(255, 255, 255, 0.9);
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   cursor: pointer;
@@ -2225,19 +2224,6 @@ html {
     transition-duration: 0.01ms !important;
   }
 }
-
-/* High Contrast Mode */
-@media (prefers-contrast: high) {
-  .hero-content {
-    background: rgba(0, 0, 0, 0.9);
-  }
-
-  .coffee-card,
-  .review-card {
-    border: 2px solid #333;
-  }
-}
-
 /* Print Styles */
 @media print {
   .header,
@@ -2424,8 +2410,6 @@ th {
   line-height: 1.2;
   margin: 0;
   background: linear-gradient(135deg, #2c1810, #4a2c1a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
@@ -2490,8 +2474,6 @@ th {
   color: #d4a574;
   margin-bottom: 0.5rem;
   background: linear-gradient(135deg, #d4a574, #b8956a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
@@ -3146,6 +3128,121 @@ th {
   background: #b8935f;
 }
 
+/* Quick View Modal (scoped) */
+.quick-view-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+}
+.quick-view-modal .modal-overlay {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.quick-view-modal .modal-content {
+  background: #fff;
+  border-radius: 15px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+.quick-view-modal .modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #666;
+  z-index: 1;
+}
+.quick-view-modal .modal-close:hover {
+  color: #333;
+}
+.quick-view-modal .modal-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+.quick-view-modal .modal-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.quick-view-modal .modal-info h2 {
+  color: #2c1810;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+.quick-view-modal .modal-price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #d4a574;
+  margin-bottom: 1rem;
+}
+.quick-view-modal .modal-description {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+.quick-view-modal .modal-details {
+  margin-bottom: 2rem;
+}
+.quick-view-modal .detail-item {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+.quick-view-modal .detail-item strong {
+  color: #2c1810;
+}
+.quick-view-modal .modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.quick-view-modal .quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.quick-view-modal .quantity-selector select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: white;
+}
+.quick-view-modal .modal-add-to-cart {
+  flex: 1;
+  max-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .quick-view-modal .modal-body {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .quick-view-modal .modal-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .quick-view-modal .modal-add-to-cart {
+    max-width: none;
+  }
+}
+
 /* Email Subscription Popup */
 .email-popup-overlay {
   position: fixed;
@@ -3727,4 +3824,58 @@ th {
   .cart-item-image {
     justify-self: center;
   }
+}
+
+/* Mobile Navbar Overrides (<=480px) */
+@media (max-width: 480px) {
+  /* Ensure the hamburger button is always visible */
+  .mobile-menu-toggle {
+    display: grid !important;
+    place-items: center;
+  }
+  /* Make sure the dropdown menu overlays correctly */
+  .nav-list {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1200 !important;
+  }
+  /* Force open state to be visible even if previous rules set display:none */
+  .nav-list.mobile-active {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.25rem;
+    max-height: 70vh;
+    overflow-y: auto;
+    opacity: 1;
+    visibility: visible;
+  }
+  /* Keep header controls compact so they don't push the toggle off-screen */
+  .header-actions {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+  }
+  .search-box {
+    width: 160px !important;
+  }
+}
+
+/* Extra-small devices navbar tweaks (<=400px, incl. ~380px) */
+@media (max-width: 400px) {
+  .container { padding: 0 12px; }
+  /* save space on tiny screens */
+  .logo { gap: 8px; }
+  .logo-img { width: 32px; height: 32px; }
+  .logo-text { font-size: 1rem; max-width: 120px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+  .mobile-menu-toggle { width: 40px; height: 40px; font-size: 1.25rem; }
+
+  .header-actions { gap: 0.4rem !important; }
+  .search-box { width: 130px !important; }
+  .search-input { padding: 6px 10px; font-size: 0.8rem; }
+
+  .nav-list { padding: 0.5rem 0.75rem; }
+  .nav-link { padding: 0.55rem 0; }
 }
