@@ -51,18 +51,18 @@ function createCartItemElement(item, index) {
             <h4>${item.name}</h4>
         </div>
         <div class="quantity-controls">
-            <button class="quantity-btn" onclick="updateQuantity(${index}, -1)">
+            <button class="quantity-btn" onclick="updateQuantity(${index}, -1)" aria-label="Decrease quantity">
                 <i class="fas fa-minus"></i>
             </button>
             <span class="quantity-display">${item.quantity}</span>
-            <button class="quantity-btn" onclick="updateQuantity(${index}, 1)">
+            <button class="quantity-btn" onclick="updateQuantity(${index}, 1)" aria-label="Increase quantity">
                 <i class="fas fa-plus"></i>
             </button>
         </div>
         <div class="cart-item-price">
             ${lineTotal.toFixed(2)}
         </div>
-        <button class="remove-item" onclick="removeItem(${index})">
+        <button class="remove-item" onclick="removeItem(${index})" aria-label="Remove item">
             <i class="fas fa-trash"></i>
         </button>
     `;
@@ -193,12 +193,12 @@ function loadRecommendedProducts() {
     const recommendedProducts = [
         {
             name: 'Sunset Roast',
-            price: 29.99,
+            price: 19.99,
             image: '../imgs/coffee2.jpg'
         },
         {
             name: 'Ethiopian Bloom',
-            price: 35.99,
+            price: 13.99,
             image: '../imgs/coffee3.webp'
         },
         {
