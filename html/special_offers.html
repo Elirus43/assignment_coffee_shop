@@ -106,67 +106,179 @@
             <div class="container">
                 <h2 class="section-title">Current Offers</h2>
                 <div class="offers-grid">
+                    
                     <!-- Offer 1 -->
-                    <div class="offer-card">
-                        <div class="offer-badge">SAVE 30%</div>
-                        <h3 class="offer-title">Coffee Subscription</h3>
-                        <p class="offer-description">Subscribe to our monthly coffee delivery and save 30% on your first 3 months. Fresh coffee delivered to your door!</p>
-                        <div class="offer-code">Code: SUBSCRIBE30</div>
-                        <div class="offer-validity">Valid until March 31, 2026</div>
-                        <button class="claim-offer-btn">Start Subscription</button>
-                    </div>
-
-                    <!-- Offer 2 -->
-                    <div class="offer-card">
-                        <div class="offer-badge">BUY 2 GET 1</div>
-                        <h3 class="offer-title">Coffee Bean Special</h3>
-                        <p class="offer-description">Buy any 2 bags of coffee beans and get the third one absolutely free. Mix and match any varieties!</p>
-                        <div class="offer-code">Code: BUY2GET1</div>
-                        <div class="offer-validity">Valid until April 15, 2026</div>
-                        <button class="claim-offer-btn">Shop Coffee</button>
-                    </div>
-
-                    <!-- Offer 3 -->
-                    <div class="offer-card">
-                        <div class="offer-badge">FREE SHIPPING</div>
-                        <h3 class="offer-title">Free Shipping Weekend</h3>
-                        <p class="offer-description">Enjoy free shipping on all orders this weekend. No minimum purchase required. Perfect time to stock up!</p>
-                        <div class="offer-code">Code: FREESHIP</div>
-                        <div class="offer-validity">Valid March 16-17, 2026</div>
-                        <button class="claim-offer-btn">Shop Now</button>
-                    </div>
-
-                    <!-- Offer 4 -->
                     <div class="offer-card">
                         <div class="offer-badge">25% OFF</div>
                         <h3 class="offer-title">Brewing Equipment Sale</h3>
                         <p class="offer-description">Upgrade your home brewing setup with 25% off all brewing equipment. From grinders to espresso machines!</p>
                         <div class="offer-code">Code: BREW25</div>
                         <div class="offer-validity">Valid until March 30, 2026</div>
+                        <div class="offer-validity">Apply code in Cart !</div>
                         <button class="claim-offer-btn">Shop Equipment</button>
                     </div>
 
-                    <!-- Offer 5 -->
+                    <!-- Offer 2 -->
                     <div class="offer-card">
                         <div class="offer-badge">STUDENT DISCOUNT</div>
-                        <h3 class="offer-title">Student Special</h3>
+                        <h3 class="offer-title">Special for Students</h3>
                         <p class="offer-description">Students get 20% off all coffee purchases. Show your student ID in-store or verify online for discount.</p>
                         <div class="offer-code">Code: STUDENT20</div>
                         <div class="offer-validity">Ongoing offer</div>
+                        <div class="offer-validity">Apply code in Cart !</div>
                         <button class="claim-offer-btn">Verify Status</button>
                     </div>
 
-                    <!-- Offer 6 -->
+                    <!-- Offer 3 -->
                     <div class="offer-card">
                         <div class="offer-badge">LOYALTY REWARD</div>
                         <h3 class="offer-title">Loyalty Points Double</h3>
                         <p class="offer-description">Earn double loyalty points on all purchases this month. Points can be redeemed for free coffee and discounts!</p>
                         <div class="offer-code">Code: DOUBLE</div>
                         <div class="offer-validity">Valid all March 2026</div>
+                        <div class="offer-validity">Apply code in Cart !</div>
                         <button class="claim-offer-btn">Join Loyalty</button>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Subscription Plans Section -->
+        <section class="subscription-plans-section">
+            <div class="container">
+                <h2 class="section-title">Coffee Subscription Plans</h2>
+                <p class="section-subtitle">Choose the perfect plan for your coffee journey and enjoy fresh beans delivered to your door</p>
+                
+                <div class="subscription-plans-grid">
+                    <!-- Basic Plan - Inactive -->
+                    <div class="subscription-plan-card inactive">
+                        <div class="plan-status-badge">Coming Soon</div>
+                        <div class="plan-header">
+                            <div class="plan-icon">
+                                <i class="fas fa-coffee"></i>
+                            </div>
+                            <h3 class="plan-name">Basic</h3>
+                            <div class="plan-price">
+                                <span class="price-amount">$19.99</span>
+                                <span class="price-period">/month</span>
+                            </div>
+                        </div>
+                        
+                        <div class="plan-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>1 bag of premium coffee (250g)</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Free standard shipping</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Monthly brewing tips</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Cancel anytime</span>
+                            </div>
+                        </div>
+                        
+                        <button class="plan-select-btn disabled" disabled>Not Available</button>
+                    </div>
+
+                    <!-- Premium Plan - Active -->
+                    <div class="subscription-plan-card active">
+                        <div class="plan-status-badge">Available Now</div>
+                        
+                        <div class="plan-header">
+                            <div class="plan-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3 class="plan-name">Premium</h3>
+                            <div class="plan-price">
+                                <span class="price-amount">$34.99</span>
+                                <span class="price-period">/month</span>
+                            </div>
+                        </div>
+                        
+                        <div class="plan-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>2 bags of premium coffee (500g)</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Free express shipping</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Monthly brewing tips & recipes</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Exclusive coffee varieties</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>10% discount on equipment</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Cancel anytime</span>
+                            </div>
+                        </div>
+                        
+                        <button class="plan-select-btn">Select Premium Plan</button>
+                    </div>
+
+                    <!-- Deluxe Plan - Inactive -->
+                    <div class="subscription-plan-card inactive">
+                        <div class="plan-status-badge">Coming Soon</div>
+                        <div class="plan-header">
+                            <div class="plan-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <h3 class="plan-name">Deluxe</h3>
+                            <div class="plan-price">
+                                <span class="price-amount">$49.99</span>
+                                <span class="price-period">/month</span>
+                            </div>
+                        </div>
+                        
+                        <div class="plan-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>3 bags of premium coffee (750g)</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Free express shipping</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Personalized brewing guide</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Rare & limited edition coffees</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>15% discount on equipment</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Priority customer support</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Cancel anytime</span>
+                            </div>
+                        </div>
+                        
+                        <button class="plan-select-btn disabled" disabled>Not Available</button>
+                    </div>
+                </div>       
         </section>
 
         <!-- Newsletter Signup -->
