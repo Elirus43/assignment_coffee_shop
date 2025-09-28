@@ -2471,8 +2471,7 @@ li {
   color: #2c1810;
   line-height: 1.2;
   margin: 0;
-  background: linear-gradient(135deg, #2c1810, #4a2c1a);
-  background-clip: text;
+  background: transparent;
 }
 
 .story-description {
@@ -2535,8 +2534,7 @@ li {
   font-weight: 700;
   color: #d4a574;
   margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, #d4a574, #b8956a);
-  background-clip: text;
+  background: transparent;
 }
 
 .stat-label {
@@ -2553,17 +2551,19 @@ li {
 
 .story-image-container {
   position: relative;
-  border-radius: 20px;
+  border-radius: 30px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   margin-bottom: 2rem;
+  outline: black;
 }
 
 .story-image {
   width: 100%;
   aspect-ratio: 16 / 9;
-  height: auto;
+  height: 400px;
   display: block;
+  border: 0;
 }
 
 .story-features {
@@ -3323,7 +3323,7 @@ li {
 .email-popup-overlay.active {
   opacity: 1;
   visibility: visible;
-  pointer-events: auto;
+  /* pointer-events: auto; */
 }
 
 .email-popup {
@@ -3686,7 +3686,7 @@ li {
 .back-to-top.show {
   opacity: 1;
   transform: translateY(0) scale(1);
-  pointer-events: auto;
+  pointer-events: auto;  
 }
 .back-to-top:hover {
   background: #b8935f;
@@ -3738,4 +3738,297 @@ li {
   margin: 0 auto;
   gap: 0.5rem;
 }
+}
+
+/* YouTube Video Section */
+.youtube-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header .section-title {
+  font-size: 2.5rem;
+  color: #2c1810;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.section-header .section-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.video-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-info {
+  padding: 1.5rem;
+}
+
+.video-info h3 {
+  font-size: 1.3rem;
+  color: #2c1810;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.video-info p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Customer Reviews Section */
+.customer-reviews {
+  padding: 80px 0;
+  background: white;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Review Form Section */
+.review-form-section {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.review-form-section h3 {
+  color: #2c1810;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.review-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.review-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.review-form .form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c1810;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background: white;
+}
+
+.review-form input:focus,
+.review-form select:focus,
+.review-form textarea:focus {
+  outline: none;
+  border-color: #d4a574;
+  box-shadow: 0 0 0 2px rgba(212, 165, 116, 0.2);
+}
+
+.review-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Star Rating Input */
+.rating-input {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 0.25rem;
+}
+
+.rating-input input[type="radio"] {
+  display: none;
+}
+
+.star-label {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #ddd;
+  transition: color 0.3s ease;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.star-label:hover,
+.star-label:hover ~ .star-label,
+.rating-input input[type="radio"]:checked ~ .star-label {
+  color: #ffc107;
+}
+
+/* reCAPTCHA styling */
+.g-recaptcha {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Form Actions */
+.form-actions {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.submit-review-btn {
+  background: #d4a574;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.submit-review-btn:hover {
+  background: #b8935f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.submit-review-btn i {
+  font-size: 1rem;
+}
+
+/* Responsive Design for New Sections */
+@media (max-width: 1024px) {
+  .video-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .youtube-section,
+  .customer-reviews {
+    padding: 60px 0;
+  }
+  
+  .section-header .section-title {
+    font-size: 2rem;
+  }
+  
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .review-form .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .review-item {
+    padding: 1.5rem;
+  }
+  
+  .review-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .reviewer-info {
+    width: 100%;
+  }
+  
+  .review-rating {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .youtube-section,
+  .customer-reviews {
+    padding: 40px 0;
+  }
+  
+  .section-header .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .video-card,
+  .review-item,
+  .review-form-section {
+    margin: 0 0.5rem;
+  }
+  
+  .review-form-section {
+    padding: 1.5rem;
+  }
+  
+  .rating-input {
+    justify-content: center;
+  }
+  
+  .star-label {
+    font-size: 1.3rem;
+  }
+  
+  .g-recaptcha {
+    transform: scale(0.85);
+    transform-origin: center;
+  }
 } 
