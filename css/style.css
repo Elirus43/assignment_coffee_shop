@@ -772,9 +772,6 @@ html {
     text-align: center;
   }
 
-  /* .cart-icon {
-    display: none;
-  } */
 }
 
 @media (max-width: 480px) {
@@ -2627,7 +2624,7 @@ li {
     font-size: 1rem;
   }
   .story-description p:first-child::before {
-    display: none; /* prevent decorative quote from causing overflow */
+    display: none;
   }
   .story-stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2766,7 +2763,7 @@ li {
   }
 }
 
-/* Checkout & Cart Styles moved from JS */
+/* Checkout & Cart Styles */
 .cart-layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -2998,7 +2995,7 @@ li {
   background: #b8935f;
 }
 
-/* Checkout Modal (scoped) */
+/* Checkout Modal */
 .checkout-modal .modal-overlay {
   background: rgba(0, 0, 0, 0.8);
   width: 100%;
@@ -3323,7 +3320,7 @@ li {
 .email-popup-overlay.active {
   opacity: 1;
   visibility: visible;
-  /* pointer-events: auto; */
+  pointer-events: auto;
 }
 
 .email-popup {

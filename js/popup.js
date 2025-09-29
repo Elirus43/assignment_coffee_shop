@@ -30,7 +30,7 @@
             // Reset to original form content if it was changed to success state
             const popupContent = document.querySelector('.popup-content');
             if (popupContent.querySelector('.popup-success')) {
-                location.reload(); // Simple way to reset - in production you'd restore the original HTML
+                location.reload();
             }
         }
 

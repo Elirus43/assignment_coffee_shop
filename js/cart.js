@@ -1,4 +1,4 @@
-// Cart functionality bootstrap for all pages
+// Cart functionality for all pages
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize global cart handlers once
     initCart();
@@ -159,7 +159,7 @@ function updateCartSummary() {
         if (appliedDiscount.type === 'percentage') {
             discount = subtotal * (appliedDiscount.value / 100);
         } else if (appliedDiscount.type === 'shipping') {
-            // For shipping discount, we handle by setting shipping cost to 0
+            // For shipping discount, handle by setting shipping cost to 0
         } else {
             discount = appliedDiscount.value;
         }
@@ -352,7 +352,7 @@ function addRecommendedToCart(name, price, image) {
 
     addToCart(item);
     updateCartCount();
-    loadCartItems(); // Refresh cart display
+    loadCartItems(); 
 }
 
 // Discount code functionality

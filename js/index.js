@@ -163,7 +163,7 @@ function initCart() {
             animation: slideInRight 0.3s ease;
         `;
 
-        // Add notification to container (newest at bottom)
+        // Add notification to container
         container.appendChild(notification);
 
         // Remove after 3 seconds
