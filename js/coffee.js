@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initCoffeeFilters();
     initQuickView();
     applySearchFromLanding();
+    initReviewFormCaptcha();
 });
 
 // Apply search query from other pages to filter and show results banner
@@ -293,3 +294,54 @@ function initQuickView() {
         }
     }
 }
+
+// reCAPTCHA: Review form validation and callbacks
+function initReviewFormCaptcha() {
+    var form = document.getElementById('reviewForm');
+    if (!form) return;
+    var errorEl = document.getElementById('recaptchaError');
+    var submitBtn = form.querySelector('button[type="submit"]');
+
+    function showError(msg) {
+        if (!errorEl) return;
+        if (msg) errorEl.textContent = msg;
+        errorEl.style.display = 'block';
+    }
+    function hideError() {
+        if (!errorEl) return;
+        errorEl.style.display = 'none';
+    }
+
+    form.addEventListener('submit', function(e) {
+        if (!window.grecaptcha || typeof window.grecaptcha.getResponse !== 'function') {
+            e.preventDefault();
+            showError('CAPTCHA is still loading. Please wait a moment and try again.');
+            return;
+        }
+        var token = window.grecaptcha.getResponse();
+        if (!token) {
+            e.preventDefault();
+            showError('Please complete the CAPTCHA.');
+            try {
+                var widget = document.querySelector('.g-recaptcha iframe');
+                if (widget) widget.focus();
+            } catch (_) {}
+            return;
+        }
+        if (submitBtn) submitBtn.disabled = true;
+    });
+}
+
+// Expose global callbacks used by the reCAPTCHA widget
+window.onReviewCaptcha = function() {
+    var err = document.getElementById('recaptchaError');
+    if (err) err.style.display = 'none';
+};
+
+window.onReviewCaptchaExpired = function() {
+    var err = document.getElementById('recaptchaError');
+    if (err) {
+        err.textContent = 'CAPTCHA expired. Please verify again.';
+        err.style.display = 'block';
+    }
+};

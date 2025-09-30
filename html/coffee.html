@@ -570,7 +570,8 @@
 
                         <!-- reCAPTCHA Plugin -->
                         <div class="form-group">
-                            <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                            <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-callback="onReviewCaptcha" data-expired-callback="onReviewCaptchaExpired"></div>
+                            <div id="recaptchaError" class="form-error" role="alert" aria-live="polite" style="display: none; color: #b00020; margin-top: 8px;">Please complete the CAPTCHA.</div>
                         </div>
 
                         <div class="form-actions">
